@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { NotebookIcon, MenuIcon, XIcon } from "lucide-react"
-import { ModeToggle } from "./mode-toggle"
+import { ThemeTogglerButton } from "./themeToggle"
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -26,7 +26,7 @@ export default function Header() {
                     <Link className="text-sm font-medium hover:underline underline-offset-4" href="/contact">
                         Contact
                     </Link>
-                    <ModeToggle />
+                    <ThemeTogglerButton />
                 </nav>
                 <Button
                     className="ml-auto md:hidden"
