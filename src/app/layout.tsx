@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 
 export const metadata: Metadata = {
@@ -11,9 +14,13 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
 
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <body className="max-w-7xl mx-auto">
+          <Header/>
+          {children}
+          <Footer/>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
