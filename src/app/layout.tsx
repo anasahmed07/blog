@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
 
   return (
-    <html lang="en">
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-        <body className="max-w-7xl mx-auto">
+    <html suppressHydrationWarning lang="en">
+      <body className="max-w-7xl mx-auto">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header/>
           {children}
           <Footer/>
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
