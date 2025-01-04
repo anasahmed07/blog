@@ -14,11 +14,11 @@ export default function Header() {
             <header className="px-4 lg:px-6 h-20 flex items-center">
                 <Link className="flex items-center justify-center" href="/">
                     <NotebookIcon className="h-6 w-6 mr-2" />
-                    <span className="font-bold">Blogy</span>
+                    <span className="font-bold">Anas Logs</span>
                 </Link>
                 <nav className="ml-auto items-center gap-4 sm:gap-6 hidden md:flex">
-                    <Link className="text-sm font-medium hover:underline underline-offset-4" href="/">
-                        Home
+                    <Link className="text-sm font-medium hover:underline underline-offset-4" href="/blog">
+                        Blog
                     </Link>
                     <Link className="text-sm font-medium hover:underline underline-offset-4" href="/about">
                         About
@@ -26,7 +26,6 @@ export default function Header() {
                     <Link className="text-sm font-medium hover:underline underline-offset-4" href="/contact">
                         Contact
                     </Link>
-                    <ThemeTogglerButton />
                 </nav>
                 <Button
                     className="ml-auto md:hidden"
@@ -36,12 +35,16 @@ export default function Header() {
                 >
                     {mobileMenuOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
                 </Button>
+                <div className="md:ml-6">
+                    <ThemeTogglerButton />
+                </div>
+                
             </header>
             {mobileMenuOpen && (
                 <div className="md:hidden">
                     <nav className="flex flex-col items-center gap-4 p-4 bg-gray-100 dark:bg-gray-800">
-                        <Link className="text-sm font-medium hover:underline underline-offset-4" href="/">
-                            Home
+                        <Link className="text-sm font-medium hover:underline underline-offset-4" href="/blog">
+                            Blog
                         </Link>
                         <Link className="text-sm font-medium hover:underline underline-offset-4" href="/about">
                             About

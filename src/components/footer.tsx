@@ -7,7 +7,7 @@ export default function Footer(){
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                © 2025 Blogy. All rights reserved.
+                © 2025 AnasLogs. All rights reserved.
                 </p>
                 <nav className="flex gap-4 mt-2">
                 <Link className="text-sm hover:underline underline-offset-4" href="#">
