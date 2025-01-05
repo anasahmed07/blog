@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon ,YoutubeIcon } from "lucide-react"
+import { SiFacebook, SiInstagram, SiLinkedin, SiX ,SiYoutube } from '@icons-pack/react-simple-icons';
 
 export default function Footer(){
     return(
@@ -11,32 +11,29 @@ export default function Footer(){
                 </p>
                 <nav className="flex gap-4 mt-2">
                 <Link className="text-sm hover:underline underline-offset-4" href="#">
-                    Terms of Service
-                </Link>
-                <Link className="text-sm hover:underline underline-offset-4" href="#">
                     Privacy Policy
                 </Link>
                 </nav>
             </div>
             <div className="flex items-center gap-4">
                 <Link href="#" target="blank" className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300">
-                <YoutubeIcon className="h-5 w-5" />
+                <SiYoutube className="h-5 w-5" />
                 <span className="sr-only">Youtube</span>
                 </Link>
                 <Link href="#" className="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">
-                <TwitterIcon className="h-5 w-5" />
+                <SiX className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
                 </Link>
                 <Link href="#" target="blank" className="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">
-                <LinkedinIcon className="h-5 w-5" />
+                <SiLinkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
                 </Link>
                 <Link href="#" target="blank" className="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">
-                <FacebookIcon className="h-5 w-5" />
+                <SiFacebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
                 </Link>
                 <Link href="#" className="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">
-                <InstagramIcon className="h-5 w-5" />
+                <SiInstagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
                 </Link>
             </div>

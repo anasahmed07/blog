@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 
 
 export const metadata: Metadata = {
-  title: "Anas's Blog",
+  title: "Anas log",
   description: "",
 };
 
@@ -14,7 +14,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
 
   return (
     <html suppressHydrationWarning lang="en">
-      <body className="max-w-7xl mx-auto">
+      <body className="max-w-6xl mx-auto">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header/>
           {children}

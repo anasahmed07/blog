@@ -10,20 +10,17 @@ export const metadata: Metadata = {
 export default function PageNotFound() {
   return (
     <>
-      <section className="flex flex-col gap-5 px-3 pageTop py-20 max-w-5xl mx-auto">
-        <h1 className="text-3xl font-bold uppercase font-barlow md:text-5xl dark:text-white">
+      <section className="flex flex-col gap-5 px-3 h-[80vh] py-[15vh] mx-auto max-w-3xl">
+        <h1 className="text-3xl font-bold uppercase font-barlow md:text-5xl">
           Stay calm and don&apos;t freak out!!
         </h1>
-        <p className="text-gray-500 font-inter dark:text-gray-400/70">
-          Looks like you&apos;ve found the doorway to the great nothing. You didn&apos;t
+        <p className="text-gray-800 font-inter dark:text-gray-100">
+          Looks like you&apos;ve found the doorway to the <strong>great nothing.</strong> You didn&apos;t
           break the internet, but I can&apos;t find what you are looking for. Please
-          visit my <b>Homepage</b> to get where you need to go.
+          visit my <strong>Homepage</strong> to get where you need to go.
         </p>
 
-        <Link
-          href="/"
-          className="p-3 ml-0  w-56  font-bold mx-auto bg-gray-300 dark:bg-gray-900 text-center rounded-md text-black dark:text-white select-none  active:scale-95 transition-all  lg:hover:ring-2 ring-black/50 dark:ring-white/50"
-        >
+        <Link href="/" className="p-3 ml-0  w-56  font-bold mx-auto bg-gray-300 dark:bg-gray-900 text-center rounded-md text-black dark:text-white select-none  active:scale-95 transition-all  lg:hover:ring-2 ring-black/50 dark:ring-white/50">
           Take me there!
         </Link>
       </section>
