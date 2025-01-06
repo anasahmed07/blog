@@ -16,23 +16,23 @@ export default function Footer(){
                 </nav>
             </div>
             <div className="flex items-center gap-4">
-                <Link href="#" target="blank" className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300">
+                <Link href="#" target="blank" className="text-gray-500 hover:text-black dark:text-gray-300 dark:hover:text-white">
                 <SiYoutube className="h-5 w-5" />
                 <span className="sr-only">Youtube</span>
                 </Link>
-                <Link href="#" className="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">
+                <Link href="#" className="text-gray-500 hover:text-black dark:text-gray-300 dark:hover:text-white">
                 <SiX className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
                 </Link>
-                <Link href="#" target="blank" className="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">
+                <Link href="#" target="blank" className="text-gray-500 hover:text-black dark:text-gray-300 dark:hover:text-white">
                 <SiLinkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
                 </Link>
-                <Link href="#" target="blank" className="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">
+                <Link href="#" target="blank" className="text-gray-500 hover:text-black dark:text-gray-300 dark:hover:text-white">
                 <SiFacebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
                 </Link>
-                <Link href="#" className="text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">
+                <Link href="#" className="text-gray-500 hover:text-black dark:text-gray-300 dark:hover:text-white">
                 <SiInstagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
                 </Link>

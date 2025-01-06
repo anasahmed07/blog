@@ -4,7 +4,6 @@ import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
-import { Link2 } from "lucide-react";
 
 interface Props {
   content: any;
@@ -17,7 +16,7 @@ const RichText = ({ content }: Props) => {
       image: ({ value }: any) => {
         console.log(value.asset._ref);
         return (
-          <div className="my-10 flex justify-center">
+          <div className="my-10 flex justify-center dark:opacity-60">
             <Image
               src={urlFor(value.asset._ref).width(800).url()} // Access the image URL
               alt={value.alt || " "}

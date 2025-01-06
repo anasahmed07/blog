@@ -15,7 +15,7 @@ export default async function BlogPage() {
                 </div>
                 
             </div>
-            <div className="grid grid-cols-3 gap-6 w-full">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                 {posts.map((post: TypeBlogPost) => (
                     <BlogCard key={post.slug} title={post.title} slug={post.slug} mainImageUrl={post.mainImageUrl} excerpt={post.excerpt} categories={post.categories} publishedAt={post.publishedAt} author={post.author}/>
                 ))}

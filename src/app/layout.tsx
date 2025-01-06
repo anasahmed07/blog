@@ -14,7 +14,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
 
   return (
     <html suppressHydrationWarning lang="en">
-      <body className="max-w-6xl mx-auto">
+      <body className="max-w-6xl mx-auto dark:bg-[#202124] bg-[#f5f6f7]">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header/>
           {children}
