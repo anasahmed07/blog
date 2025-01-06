@@ -4,13 +4,16 @@ import { TypeBlogPost } from '@/lib/types';
 
 export default async function Page({ params, }: { params: Promise<{ slug: string }> }) {
   const slug = (await params).slug;
-  const post: TypeBlogPost = await fetchPostBySlug(slug);
+  const post = (await fetchPostBySlug(slug) as TypeBlogPost);
 
+  if (!post) {
+    return <div>Post not found</div>;
+  }
+  else{
   return (
     <div>
-      <h1>{post.title}</h1>
-      <p>{post.excerpt}</p>
       <img src={post.mainImageUrl} alt={post.title} />
     </div>
     )
+  }
   }
