@@ -27,12 +27,12 @@ export async function fetchAllPosts() {
 }
 
 
-export async function fetchPostBySlug(slug: string): Promise<TypeBlogPost | null> {
+export async function fetchPostBySlug(slug: string): Promise<TypeBlogPost> {
   const query = `
     *[_type == "post" && slug.current == "${slug}" ][0] {
       title,
-      mainImage,
-      slug,
+      "mainImageUrl": mainImage.asset->url,
+      "slug": slug.current,
       content
     }
   `;
