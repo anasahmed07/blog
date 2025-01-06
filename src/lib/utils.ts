@@ -1,7 +1,7 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 import { client } from '@/sanity/lib/client';
-import { TypeBlogPost } from "./types";
+import { TypeBlogPost, TypePostWithContent } from "./types";
 
 
 export function cn(...inputs: ClassValue[]) {
@@ -15,7 +15,10 @@ export async function fetchAllPosts() {
     title,
     "slug": slug.current,
     "mainImageUrl": mainImage.asset->url,
-    excerpt
+    excerpt,
+    "categories": categories[]->title,
+    publishedAt,
+    "author": author->name
     }`;
   try {
     const posts: TypeBlogPost[] = await client.fetch(query);
@@ -27,19 +30,21 @@ export async function fetchAllPosts() {
 }
 
 
-export async function fetchPostBySlug(slug: string): Promise<TypeBlogPost | null> {
+export async function fetchPostBySlug(slug: string): Promise<TypePostWithContent | null> {
 
-  const query = `
-    *[_type == "post" && slug.current == "${slug}" ][0] {
-      title,
-      "mainImageUrl": mainImage.asset->url,
-      "slug": slug.current,
-      content
-    }
-  `;
-  
+  const query = `*[_type == "post" && slug.current == "${slug}"][0]{
+  title,
+  "slug": slug.current,
+  "mainImageUrl": mainImage.asset->url,
+  excerpt,
+  publishedAt,
+  "author": author->name,
+  "categories": categories[]->title,
+  content
+}`;
+
   try {
-    const post: TypeBlogPost = await client.fetch(query);
+    const post: TypePostWithContent = await client.fetch(query);
     return post;
   } catch (error) {
     console.error("Error fetching post:", error);

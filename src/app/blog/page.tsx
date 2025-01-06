@@ -10,14 +10,14 @@ export default async function BlogPage() {
         <div className='py-10'>
             <div className='flex justify-between items-center w-full pl-10'>
                 <div className='my-10'>
-                    <h1 className="text-6xl font-bold mb-10">Blog</h1>
+                    <h1 className="text-6xl font-bold mb-10">All Blogs</h1>
                     <p className="py-4">Read my thoughts on software development, design, and more.</p>
                 </div>
                 
             </div>
             <div className="grid grid-cols-3 gap-6 w-full">
                 {posts.map((post: TypeBlogPost) => (
-                    <BlogCard key={post.slug} title={post.title} slug={post.slug} mainImageUrl={post.mainImageUrl} excerpt={post.excerpt} />
+                    <BlogCard key={post.slug} title={post.title} slug={post.slug} mainImageUrl={post.mainImageUrl} excerpt={post.excerpt} categories={post.categories} publishedAt={post.publishedAt} author={post.author}/>
                 ))}
             </div>
         </div>

@@ -1,18 +1,21 @@
 import { fetchPostBySlug } from '@/lib/utils';
-import { TypeBlogPost } from '@/lib/types';
+import { TypePostWithContent } from '@/lib/types';
+import RichText from '@/components/richText';
+
 
 
 export default async function Page({ params, }: { params: Promise<{ slug: string }> }) {
   const slug = (await params).slug;
-  const post = (await fetchPostBySlug(slug) as TypeBlogPost);
+  const post = (await fetchPostBySlug(slug) as TypePostWithContent);
 
   if (!post) {
     return <div>Post not found</div>;
   }
   else{
   return (
-    <div>
-      <img src={post.mainImageUrl} alt={post.title} />
+    <div className="max-w-4xl border-2 my-10 p-10 rounded-xl mx-auto">
+      <h1 className="text-5xl font- tracking-tight leadin mb-10">{post.title}</h1>
+      <RichText content={post.content} />
     </div>
     )
   }
