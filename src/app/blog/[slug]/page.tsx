@@ -13,7 +13,7 @@ export default async function Page({ params, }: { params: Promise<{ slug: string
   }
   else{
   return (
-    <div className="max-w-4xl border-2 my-10 px-2 sm:p-10 rounded-xl mx-2 sm:mx-auto">
+    <div className="max-w-4xl lg:border-2 my-10 py-5 px-2 sm:p-10 rounded-xl mx-1 lg:mx-auto">
       <h1 className="text-5xl font- tracking-tight leadin mb-10">{post.title}</h1>
       <RichText content={post.content} />
     </div>

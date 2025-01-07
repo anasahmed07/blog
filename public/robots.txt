@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://anas-blogs.vercel.app/sitemap.xml
