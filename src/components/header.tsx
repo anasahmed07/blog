@@ -41,7 +41,7 @@ export default function Header() {
             {mobileMenuOpen && (
                 <div className="md:hidden">
                     <nav className="flex flex-col items-center gap-4 p-4 bg-gray-100 dark:bg-gray-800">
-                        <Link className="text-sm font-medium hover:underline underline-offset-4" href="/">
+                        <Link className="text-sm font-medium hover:underline underline-offset-4" href="/blog">
                             Blog
                         </Link>
                         <Link className="text-sm font-medium hover:underline underline-offset-4" href="/about">
