@@ -8,7 +8,7 @@ import { ThemeTogglerButton } from "./themeToggle"
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     return (
-        <div>
+        <div className="sticky dark:bg-[#202124] bg-[#f5f6f7] top-0 z-[1]">
             <header className="px-4 lg:px-6 h-20 flex items-center">
                 <Link className="flex items-center justify-center" href="/">
                     <NotebookIcon className="h-6 w-6 mr-2" />

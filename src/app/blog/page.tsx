@@ -8,7 +8,7 @@ export default async function BlogPage() {
     const posts = await fetchAllPosts();
 
     return (
-        <div className='py-10 flex flex-col px-4 lg:px-10'>
+        <div className='max-w-6xl mx-auto py-10 flex flex-col px-4 lg:px-10'>
             <div className='mx-auto'>
                 <div className='flex flex-col-reverse content-center sm:flex-row sm:justify-between px-10 mb-6'>
                     <div className='my-10 sm:mx-10 content-center'>

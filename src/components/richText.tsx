@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { urlFor } from "@/sanity/lib/image";
@@ -14,7 +12,6 @@ const RichText = ({ content }: Props) => {
     types: {
       // Render images in the rich text
       image: ({ value }: any) => {
-        console.log(value.asset._ref);
         return (
           <div className="my-10 flex justify-center dark:opacity-60">
             <Image

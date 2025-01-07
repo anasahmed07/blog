@@ -1,4 +1,5 @@
 import { BlogCard } from '@/components/blogCard';
+import { NewsletterForm } from '@/components/newsletter';
 import { TypeBlogPost } from '@/lib/types';
 import { fetchAllPosts } from '@/lib/utils';
 
@@ -7,7 +8,7 @@ export default async function BlogPage() {
   const posts = await fetchAllPosts();
 
   return (
-    <div className='flex flex-col pb-10 px-4 lg:px-10'>
+    <div className='max-w-6xl mx-auto flex flex-col pb-10 px-4 lg:px-10'>
       <div className='mx-auto'>
         <div className='flex justify-between items-center w-full'>
           <div className=''>
@@ -21,6 +22,7 @@ export default async function BlogPage() {
           ))}
         </div>
       </div>
+      <NewsletterForm />
     </div>
   );
 }

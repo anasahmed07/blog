@@ -4,7 +4,7 @@ import { SiFacebook, SiInstagram, SiLinkedin, SiX ,SiYoutube } from '@icons-pack
 export default function Footer(){
     return(
         <footer className="w-full py-6 px-4 md:px-6 border-t">
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div className="mx-auto flex flex-col md:flex-row justify-between ">
             <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                 © 2025 AnasLogs. All rights reserved.
