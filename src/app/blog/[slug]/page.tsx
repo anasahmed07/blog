@@ -1,7 +1,6 @@
 import { fetchPostBySlug } from '@/lib/utils';
 import { TypePostWithContent } from '@/lib/types';
 import RichText from '@/components/richText';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 
